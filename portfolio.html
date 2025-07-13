@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel=stylesheet href="myproject.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(https://img.freepik.com/premium-photo/top-view-laptop-concept-with-blue-desk-concept-background-3d-rendering_626958-393.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            color: cyan;
+            box-shadow: 0 6px 10px cyan;
+            padding: 15px;
+        }
+
+        span {
+            color: cyan;
+        }
+
+        nav {
+            padding: 10px;
+        }
+
+        nav a {
+            position: relative;
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 4px;
+            transition: 0.3s ease;
+            margin: 10px 14px;
+            font-size: 18px;
+            border-radius: 25px;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 1.5px;
+            background-color: cyan;
+            transition: width 0.4s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        pre {
+            font-size: 30px;
+            font-weight: bolder;
+        }
+
+        .sec1 {
+            padding-left: 120px;
+            color: white;
+        }
+
+        .Ls {
+            width: 30%;
+        }
+
+        .Rs {
+            padding-top: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .sec1 div {
+            padding: 200px 150px;
+            text-align: left;
+            font-size: 50px;
+        }
+
+        .img {
+            border-radius: 50%;
+            box-shadow: 5px 1px 10px 10px cyan;
+            margin-top: 50px;
+        }
+
+        div img:hover {
+            transform: scale(1.1);
+        }
+
+        #about {
+            padding: 120px 40px;
+            justify-content: space-between;
+            row-gap: 200px;
+            color: white;
+            font-size: 20px;
+            background-color: rgb(11, 11, 30);
+            gap: 20px;
+        }
+
+        h3 p {
+            font-family: Raleway;
+            font-size: 20px;
+        }
+
+        a {
+            color: cyan;
+            font-size: 30px;
+            font-weight: bolder;
+            padding: 20px;
+        }
+
+        .contents {
+            font-size: 20px;
+            font-style: none;
+        }
+
+        .btn {
+            box-shadow: 0 0 5px cyan;
+            background: none;
+            border-radius: 40px;
+            padding: 5px;
+            color: cyan;
+            border-color: cyan;
+            margin-left: 700px;
+            font-size: bolder;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+        }
+
+        #Education {
+            padding: 150px 40px;
+        }
+
+        li {
+            font-size: 20px;
+            color: cyan;
+        }
+
+        #Education pre {
+            padding-top: 20px;
+            font-style: none;
+            font-size: 20px;
+        }
+
+        #Projects {
+            padding: 150px 40px;
+        }
+
+        #Projects img {
+            padding: 0px;
+            display: flex;
+        }
+
+        #Projects .box {
+            padding-top: 30px;
+        }
+
+        .box {
+            position: relative;
+            overflow: hidden;
+            border-radius: 40px;
+        }
+
+        .box img {
+            width: 100%;
+            height: 300px;
+            padding: 20px;
+            box-shadow: 3px 1px 7px 7px cyan;
+            transition: transform 0.5s;
+        }
+
+        .container {
+            display: flex;
+            gap: 120px;
+            padding: 40px;
+        }
+
+        .about {
+            height: 0;
+            width: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), cyan);
+            left: 0;
+            bottom: 0;
+            position: absolute;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            transition: height 0.6s;
+        }
+
+        .about a {
+            margin-top: 20px;
+            background: white;
+            text-align: center;
+        }
+
+        .box:hover img {
+            transform: scale(1.1);
+        }
+
+        .box:hover .about {
+            height: 100%;
+        }
+
+        .boxes {
+            display: flex;
+            gap: 100px;
+            padding: 150px;
+            justify-content: center;
+        }
+
+        .boxes img {
+            border-radius: 50%;
+            box-shadow: 3px 1px 7px 7px cyan;
+            margin: 0 10px;
+            width: 100px;
+        }
+
+
+        .info {
+            padding-top: 100px;
+            padding-bottom: 15px;
+        }
+
+        i:hover {
+            color: cyan;
+            transform: scale(1.1);
+        }
+
+        .query {
+            display: flex;
+            flex-direction: column;
+            padding-top: 40px;
+            gap: 30px;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+        }
+
+        .button {
+            margin-left: 50px;
+            margin-top: 20px;
+            background-color: cyan;
+            color: black;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PORTFOLIO</h1>
+        <hr>
+        </nav>
+        <nav>
+            <section class="right">
+                <a href="#Home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#Education">Education</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Skills">Skills</a>
+                <a href="#Contact">Contact</a>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <section class="sec1">
+            <div class="Ls ">
+                <h3>Hi,I am <span>Manya</span></h3>
+                <pre>A Frontend Web Developer</pre>
+            </div>
+        </section>
+        <div id="about">
+            <a>About Me</a>
+            <hr>
+            <div class="Rs">
+                <img src="ss.jpg" width="200px" height="300px" alt="not found" class="img">
+                <pre> <h4  id="About-Me" class="contents"> 
+I'm a frontend web developer 
+passionate about creating 
+beautiful and user-friendly
+websites.I enjoy applying my
+skills and knowledge to real-
+world projects, constantly learning 
+and growing in the field of web 
+development.I'm always excited to
+explore new tools and technologies,
+dive into the world of coding,
+and build meaningful digital 
+experiences that make an impact.
+</h4>
+</pre>
+            </div>
+            <button class="btn">Download CV</button>
+            <div id="Education">
+                <a>Education <i class="fa-solid fa-graduation-cap"></i></a>
+                <hr>
+                <pre class="font"><li class="contents">Schooling</li>
++2 from D.A.V Public School Hehal,Ranchi
+
+Passing year: 2023
+
+
+<li class="contents">Bachelor's</li>
+currently pursuing BCA from 
+Sarala Birla University(SBU)
+
+Current year: 3rd 
+
+Duration: 2023-2026</pre>
+            </div>
+            <div id="Projects">
+                <a>My Projects</a>
+                <hr>
+                <div class="container">
+                    <div class="box">
+                        <img src="education.png" alt="not found">
+                        <div class="about">
+                            <h4>Educational Website landing page</h4>
+                            <p>A responsive eb platform designed to help students access course.
+                                See the Website.
+                            </p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <img src="cosmetics.png" alt="not found">
+                        <div class="about">
+                            <h3>Cosmetics Website landing page</h3>
+                            <p>A modern cosmetics website with a sleek,responsive
+                                layout and intuitive navigation.
+                                See the Website
+                            </p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="Skills">
+                <a>Skills</a>
+                <hr>
+                <div class="boxes">
+                    <img src="https://images.seeklogo.com/logo-png/20/1/html5-logo-png_seeklogo-206834.png"
+                        height="150px" width="150px">
+                    <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png" height="150px" width="150px">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTe1njHYU_apPRMie4IY-hCNFOMMhOx4OJGQ&s"
+                        height="150px" width="150px">
+                    <img src="https://i.ytimg.com/vi/MhYECGUzdA4/sddefault.jpg" height="150px" width="180px"
+                    >
+                    <img src="https://www.brandlogopng.com/files/logo/c/c-language-png-hd-logo-understanding-c-program-compilation-process-tq8i.jpeg"
+                        height="150px" width="150px">
+                </div>
+                <div id="Contact">
+                    <a>Contact Me <i class="fa-solid fa-phone"></i></a>
+                    <hr>
+                    <div class="end">
+                        <div class="info">
+                            <p>Contact me at:</p>
+                            <p>manyajyotii22@gmail.com</p>
+                            <p>1234567891</p>
+                        </div>
+                        <div class="icons"></div>
+                        <i class="fa-brands fa-linkedin"></i>
+                        <i class="fa-brands fa-square-twitter"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-square-instagram"></i>
+                    </div>
+                    <div class="right">
+                        <div class="query">
+                            <input type="text" name="email" placeholder="Enter your Email here..">
+                            <input type="text" name="Phone No." placeholder="Enter Phone.No..">
+                            <input type="text" name="Msg" placeholder="Text here..">
+                        </div>
+                        <button class="btn button">Submit</button>
+                    </div>
+                </div>
+    </main>
+</body>
+</html>
